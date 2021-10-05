@@ -1,10 +1,21 @@
-.SiteHeader__container {
+.SiteHeader {
+  background-color: cadetblue;
+  width: 100%;
   @include flexCenter(row);
+}
+
+.SiteHeader__container {
+  max-width: $maxContainerWidth;
+  width: 100%;
+  @include flexCenter(row);
+  justify-content: space-between;
+  margin: 0 2rem 0 2rem;
 }
 
 // Logo
 .SiteHeader__logo {
   a {
+    color: $fontLight;
     text-decoration: none;
     letter-spacing: -0.095rem;
   }
@@ -20,6 +31,7 @@
 .SiteHeaderNav__item {
   list-style: none;
   .SiteHeaderNav__link {
+    color: $fontLight;
     font-weight: $headerButtonWeight;
     @include formatButton();
   }
@@ -31,9 +43,23 @@
 
 // Sign in
 .HeaderSignInButton {
-  font-weight: $headerButtonWeight;
+  background: $semiTransparent;
+  @include roundedButton();
+  @include flexCenter(row);
   text-decoration: none;
+  padding: 10rem;
+  .HeaderSignInButton__label {
+    color: $fontLight;
+    font-weight: $headerButtonWeight;
+  }
+  .HeaderSignInButton__arrow {
+    width: 16px;
+    height: 16px;
+  }
 }
 .HeaderSignInButton:hover {
-  @include hoverFade();
+  @include hoverLighten();
+  .HeaderSignInButton__label {
+    color: $fontLight;
+  }
 }
