@@ -1,4 +1,6 @@
-.SiteHeader__container {
+.SiteHeader {
+  background-color: cadetblue;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,7 +16,30 @@
           flex-direction: row;
 }
 
+.SiteHeader__container {
+  max-width: 1112px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 2rem 0 2rem;
+}
+
 .SiteHeader__logo a {
+  color: #fff;
   text-decoration: none;
   letter-spacing: -0.095rem;
 }
@@ -46,7 +71,8 @@
 }
 
 .SiteHeaderNav__item .SiteHeaderNav__link {
-  font-weight: 500;
+  color: #fff;
+  font-weight: 600;
   cursor: pointer;
   border: none;
   background: none;
@@ -59,14 +85,46 @@
 }
 
 .HeaderSignInButton {
-  font-weight: 500;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   text-decoration: none;
+  padding: 10rem;
+}
+
+.HeaderSignInButton .HeaderSignInButton__label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.HeaderSignInButton .HeaderSignInButton__arrow {
+  width: 16px;
+  height: 16px;
 }
 
 .HeaderSignInButton:hover {
-  opacity: 0.5;
+  background-color: #fff;
+  opacity: 0.3;
   -webkit-transition: opacity ease-in-out 0.1s;
   transition: opacity ease-in-out 0.1s;
+  -webkit-transition: background-color ease-in 0.1s;
+  transition: background-color ease-in 0.1s;
+}
+
+.HeaderSignInButton:hover .HeaderSignInButton__label {
+  color: #fff;
 }
 
 body {

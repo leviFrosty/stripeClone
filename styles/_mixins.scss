@@ -15,3 +15,14 @@
   opacity: 0.5;
   transition: opacity ease-in-out 0.1s;
 }
+
+@mixin hoverLighten() {
+  background-color: $fontLight;
+  opacity: 0.3;
+  transition: opacity ease-in-out 0.1s;
+  transition: background-color ease-in 0.1s;
+}
+
+@mixin roundedButton() {
+  border-radius: 25px;
+}
