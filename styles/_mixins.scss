@@ -1,0 +1,17 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin formatButton() {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+@mixin hoverFade() {
+  opacity: 0.5;
+  transition: opacity ease-in-out 0.1s;
+}

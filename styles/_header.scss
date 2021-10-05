@@ -1,0 +1,39 @@
+.SiteHeader__container {
+  @include flexCenter(row);
+}
+
+// Logo
+.SiteHeader__logo {
+  a {
+    text-decoration: none;
+    letter-spacing: -0.095rem;
+  }
+  a:hover {
+    @include hoverFade();
+  }
+}
+
+// Nav
+.SiteHeaderNav {
+  @include flexCenter(row);
+}
+.SiteHeaderNav__item {
+  list-style: none;
+  .SiteHeaderNav__link {
+    font-weight: $headerButtonWeight;
+    @include formatButton();
+  }
+
+  .SiteHeaderNav__link:hover {
+    @include hoverFade();
+  }
+}
+
+// Sign in
+.HeaderSignInButton {
+  font-weight: $headerButtonWeight;
+  text-decoration: none;
+}
+.HeaderSignInButton:hover {
+  @include hoverFade();
+}
