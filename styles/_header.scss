@@ -2,6 +2,7 @@
   background-color: cadetblue;
   width: 100%;
   @include flexCenter(row);
+  padding: 10px 0;
 }
 
 .SiteHeader__container {
@@ -16,6 +17,7 @@
 .SiteHeader__logo {
   a {
     color: $fontLight;
+    font-size: $headerFontSize + 0.6rem;
     text-decoration: none;
     letter-spacing: -0.095rem;
   }
@@ -29,10 +31,12 @@
   @include flexCenter(row);
 }
 .SiteHeaderNav__item {
+  padding: 0 1rem;
   list-style: none;
   .SiteHeaderNav__link {
     color: $fontLight;
     font-weight: $headerButtonWeight;
+    font-size: $headerFontSize;
     @include formatButton();
   }
 
@@ -47,19 +51,31 @@
   @include roundedButton();
   @include flexCenter(row);
   text-decoration: none;
-  padding: 10rem;
+  padding: 0.45rem 0.9rem;
+  transition: color $hoverTransitionTime;
+
   .HeaderSignInButton__label {
     color: $fontLight;
+    font-size: $headerFontSize;
     font-weight: $headerButtonWeight;
+    transition: color $hoverTransitionTime;
   }
   .HeaderSignInButton__arrow {
-    width: 16px;
-    height: 16px;
+    padding: 0 0 0 0.4rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    color: $fontLight;
+    transition: color $hoverTransitionTime;
   }
 }
 .HeaderSignInButton:hover {
   @include hoverLighten();
   .HeaderSignInButton__label {
-    color: $fontLight;
+    color: $fontDark;
+  }
+  .HeaderSignInButton__arrow {
+    width: 0.8rem;
+    height: 0.8rem;
+    color: $fontDark;
   }
 }
