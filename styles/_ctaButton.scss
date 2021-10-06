@@ -1,0 +1,33 @@
+.ctaButton {
+  background: $semiTransparent;
+  @include roundedButton();
+  @include flexCenter(row);
+  text-decoration: none;
+  padding: 0.45rem 0.9rem;
+  transition: color $hoverTransitionTime;
+
+  .ctaButton__label {
+    color: $fontLight;
+    font-size: $headerFontSize;
+    font-weight: $headerButtonWeight;
+    transition: color $hoverTransitionTime;
+  }
+  .ctaButton__arrow {
+    padding: 0 0 0 0.3rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    color: $fontLight;
+    transition: color $hoverTransitionTime;
+  }
+}
+.ctaButton:hover {
+  @include hoverLighten();
+  .ctaButton__label {
+    color: $fontDark;
+  }
+  .ctaButton__arrow {
+    width: 0.8rem;
+    height: 0.8rem;
+    color: $fontDark;
+  }
+}

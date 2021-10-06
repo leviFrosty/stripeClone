@@ -88,7 +88,23 @@
   transition: opacity ease-in-out 0.1s;
 }
 
-.HeaderSignInButton {
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ctaButton {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
   display: -webkit-box;
@@ -110,7 +126,7 @@
   transition: color ease-in-out 0.1s;
 }
 
-.HeaderSignInButton .HeaderSignInButton__label {
+.ctaButton .ctaButton__label {
   color: #fff;
   font-size: 0.95rem;
   font-weight: 700;
@@ -118,16 +134,16 @@
   transition: color ease-in-out 0.1s;
 }
 
-.HeaderSignInButton .HeaderSignInButton__arrow {
-  padding: 0 0 0 0.4rem;
-  width: 0.8rem;
-  height: 0.8rem;
+.ctaButton .ctaButton__arrow {
+  padding: 0 0 0 0.3rem;
+  width: 0.7rem;
+  height: 0.7rem;
   color: #fff;
   -webkit-transition: color ease-in-out 0.1s;
   transition: color ease-in-out 0.1s;
 }
 
-.HeaderSignInButton:hover {
+.ctaButton:hover {
   background-color: #fff;
   opacity: 0.3;
   -webkit-transition: opacity ease-in-out 0.1s;
@@ -136,11 +152,11 @@
   transition: background-color ease-in-out 0.1s;
 }
 
-.HeaderSignInButton:hover .HeaderSignInButton__label {
+.ctaButton:hover .ctaButton__label {
   color: #425466;
 }
 
-.HeaderSignInButton:hover .HeaderSignInButton__arrow {
+.ctaButton:hover .ctaButton__arrow {
   width: 0.8rem;
   height: 0.8rem;
   color: #425466;
@@ -152,9 +168,6 @@ h2,
 h3,
 p {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0;
   padding: 0;
 }

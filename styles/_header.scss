@@ -44,38 +44,3 @@
     @include hoverFade();
   }
 }
-
-// Sign in
-.HeaderSignInButton {
-  background: $semiTransparent;
-  @include roundedButton();
-  @include flexCenter(row);
-  text-decoration: none;
-  padding: 0.45rem 0.9rem;
-  transition: color $hoverTransitionTime;
-
-  .HeaderSignInButton__label {
-    color: $fontLight;
-    font-size: $headerFontSize;
-    font-weight: $headerButtonWeight;
-    transition: color $hoverTransitionTime;
-  }
-  .HeaderSignInButton__arrow {
-    padding: 0 0 0 0.4rem;
-    width: 0.8rem;
-    height: 0.8rem;
-    color: $fontLight;
-    transition: color $hoverTransitionTime;
-  }
-}
-.HeaderSignInButton:hover {
-  @include hoverLighten();
-  .HeaderSignInButton__label {
-    color: $fontDark;
-  }
-  .HeaderSignInButton__arrow {
-    width: 0.8rem;
-    height: 0.8rem;
-    color: $fontDark;
-  }
-}
